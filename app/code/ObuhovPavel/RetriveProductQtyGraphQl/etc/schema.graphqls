@@ -1,0 +1,11 @@
+
+type Query {
+    productqty (
+            sku: String @doc(description: "Query by SKU.")
+            store: Int @doc(description: "Query by Store.")
+    ) : Productqty @resolver( class: "ObuhovPavel\\RetriveProductQtyGraphQl\\Model\\Resolver\\Productqty")
+}
+
+type Productqty {
+    qty  : Float
+}
